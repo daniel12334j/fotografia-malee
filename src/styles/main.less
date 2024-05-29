@@ -1,0 +1,200 @@
+@fontDoNome: Sevillana, cursive;
+@corDeFundo:#edccb4;
+@corDoHeader:#c6cdbc;
+@corTextos:#c97d68;
+@corSection: #eaded5;
+
+html{
+    overflow-y: 1;
+}
+
+body{
+    background-color: @corDeFundo ;
+}
+
+header{
+    background-color: @corDoHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+            h1{
+                font-family: @fontDoNome;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 3em;
+                margin-bottom: 0;
+    
+                span{
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+
+.container{
+    max-width: 1023px;
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background-color: @corTextos;
+}
+
+.nav-link{
+    text-align: center;
+}
+section{
+    height: 100vh;
+padding-top: 170px;
+}
+
+#inicio{
+    padding-top: 0;
+}
+
+#sobre-mim{
+background-color: @corSection;
+padding-top: 50px;
+
+.d-lg-block{
+    display: flex;
+}
+
+img{
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.678);
+    height: 200px;
+}
+
+p{
+    margin-bottom: 30px;
+}
+}
+
+#contato{
+    .row{
+        
+        .col-md-6{
+            a{
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+
+                i{
+                    font-size: 100px;
+                    color: @corTextos;
+
+
+
+                }
+                p{
+                    color: @corTextos;
+                    font-size: 50px;
+
+
+                }
+            }
+        }
+    }
+}
+
+.carousel{
+    position: relative;
+z-index: 1;
+    img{
+        width: 100%;
+        height: 450px;
+    }
+}
+
+.carousel-indicators{
+    button.active{
+        background-color: rgba(255, 0, 0, 0.61);
+    }
+}
+
+.text-color{
+    color:@corTextos;
+    font-family: @fontDoNome;  
+}
+
+footer{
+    background-color: @corTextos;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width:1023px) and (min-width:768px){
+    section{
+        height: 75vh;
+    }
+    #sobre-mim{
+        height: 100vh;
+        .foto-grande{
+            display: none;
+        }
+    }
+
+    #contato{
+        .row{
+            .col-md-6{
+                a{
+                    i{
+                        margin: auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px){
+    #inicio{
+        height: 50vh;
+    }
+
+    #sobre-mim{
+        height: 140vh;
+
+        .foto-grande{
+            display: none;
+        }
+        h3{
+            font-size: 30px;
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        img{
+            height: 100px;
+        }
+    }
+
+    #contato{
+        margin-bottom: 80px;
+        .row{
+            .col-md-6{
+                a{
+                    i{
+                        margin: auto 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-item{
+        height: 200px;
+    }
+    .container{
+        max-width: 350px;
+    }
+
+
+}
